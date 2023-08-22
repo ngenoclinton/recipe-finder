@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="bg-slate-100 mx-auto w-screen h-screen overflow-x-hidden">
+        <div class="nav flex w-full bg-grey-200 h- h-auto mx-auto py-3 px-6 items-center" 100px="">
+            <span>CooKRecipes</span>
+            <div class="flex items-center space-x-4">
+                <span class="px-2 text-center text-base">Home</span>
+                <span class="px-2 text-center text-base">Help</span>
+                <span class="px-2 text-center text-base"></span>
+            </div>
+        </div>
+        <div class="container px-4 mx-auto max-w-5xl bg-teal-200">
+            <div class="meal-wrapper mx-auto max-w-5xl items-center">
+                <div class="meal-search space-y-3 items-center text-center">
+                    <h2 class="title text-2xl font-bold mx-auto items-center">Find Meals for Ingredients</h2>
+                    <blockquote class=''>Real food doesn't have ingredients, real foods is Ingredients </blockquote>
+                    <cite class="inline-block">-Jamie Oliver</cite>
+                </div>
+
+                <div class="meal-search-box mt-8 flex max-w-4xl mx-auto">
+                    <input type="text" class="search-recipe w-full focus:outline-none py-2 px-4 border-[1px] border-orange-400 text-base mx-auto rounded-tl-2xl rounded-bl-2xl" placeholder="Enter an Ingredient" id="search-input"/>
+                    <button type="submit" class="search-btn btn h-[55px]  bg-orange-400 py-2 px w-[60px] border-none rounded-tr-2xl rounded-br-2xl hover:bg-orage-600 hover:text-white" id="search-btn"><i class="icon ion-md-search text-2xl right"></i></button>
+                </div>
+            </div>
+            <!-- Meal display -->
+            <div class="show-meal meal-result mx-auto max-w-5xl items-center space-y-3 flex flex-col justify-center text-center mt-9">
+                <h2 class="title text-2xl">Your Search Result:</h2>
+                <div id='meal' class="meal recipe mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 items-center">
+                    <!-- meal item -->
+                    <!-- <div class="meal-item shadow-xl rounded-2xl overflow-hidden my-8 mx-0 cursor-pointer bg-slate-50">
+                        <div class="meal-img block w-full">
+                            <img src="" alt="recipe image is placed here">
+                        </div>
+                        <div class="meal-name px-2 py-6">
+                            <h3 class="font-bold text-xl my-8">Amazing Food</h3>
+                            <a href="#" class="recipe-btn font-semibold text-lg no-underline my-8 mx-auto bg-teal-400 hover:bg-teal-500 text-white rounded-3xl py-2 px-5">Get Recipe</a>
+                        </div>
+                    </div> -->
+                    <!--  -->
+                </div>
+            </div>
+            <!--  -->
+            <div class="meal-details fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-orange-50 w-3/4 h-[90%] overflow-y-auto items-center mx-auto text-center flex justify-center flex-col px-5 space-y-5 ralative shadow-xl ">
+                <!-- Recipe save to favorites  -->
+                
+                    <!-- <button type="button" id="recipe-close-btn" class="btn recipe-close-btn rounded-full py-[2px] px-[11px] bg-teal-400 text-white text-center flex justify-center items-center  w-[35px h-35px] absolute top-5 right-10">
+                        <i class="icon ion-md-heart text-2xl "></i>
+                    </button></div> -->
+                    <!-- recipe close btn -->
+                    <button type="button" id="recipe-close-btn" class="btn recipe-close-btn rounded-full py-[2px] px-[11px] bg-teal-400 text-white text-center flex justify-center items-center absolute top-6 right-4 opacity[.9]">
+                        <i class="icon ion-md-close text-2xl "></i>
+                    </button>
+                    <div class="meal-details-content flex flex-col justify-center space-y-4 mx-auto pt-20  ">
+                        <h2 class="recipe-title font-bold text-2xl">Recipe Title here</h2>
+                        <p class="recipe-category text-xl font-semibold bg-white  w-fit mx-auto items-center px-3 py-1 rounded-2xl shadow-lg text-orange-500">Category name</p>
+                        <div class="recipe-instructions px-8">
+                            <h3 class="title text-xl font-semibold py-2 mb-3 mx-auto">Instructions:</h3>
+                            <p class="instructions text-base">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ipsum recusandae voluptatem, optio quo deserunt! Cupiditate minus deserunt, iste molestiae, quod expedita, cumque sequi aut quis repudiandae illo. Illo, voluptates.
+                            </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga corporis soluta molestias officia voluptas consequuntur saepe quod est vel cum labore sapiente deleniti omnis doloremque rem ad, asperiores repellendus. Voluptatem.</p>
+                        </div>
+                        <div class="recipe-meal-img items-center flex justify-center mx-auto mt-3">
+                            <img src="#" alt="recipe image" class="rounded-1/2 w-[100px] h-[100px] mx-auto block">
+                        </div>
+                        <div class="recipe-links no-underline text-lg font-semibold bg-teal-400 rounded-3xl py-1 px-5 text-white w-fit flex justify-center mx-auto ">
+                            <a href="#" class="flex justify-center mx-auto">Watch Video</a>
+                        </div>
+                    </div>
+                
+            </div>
+            <!--  -->
+            <div class="show-category category-result mx-auto max-w-5xl items-center space-y-3 flex flex-col justify-center text-center mt-9">
+                <h2 class="title text-xl font-semibold">Categories</h2>
+                <div id='category' class="category recipe mx-auto grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 gap-4 items-center">
+                    <!-- meal Category -->
+                    <div class="category-item shadow-xl rounded-2xl overflow-hidden my-8 mx-0 cursor-pointer bg-slate-50">
+                        <div class="meal-img block w-full">
+                            <img src="" alt="recipe image is placed here">
+                        </div>
+                        <div class="meal-name px-2 py-6">
+                            <h3 class="font-bold text-xl my-8">Amazing Food</h3>
+                            <a href="#" class="recipe-btn font-semibold text-lg no-underline my-8 mx-auto bg-teal-400 hover:bg-teal-500 text-white rounded-3xl py-2 px-5">Get Recipe</a>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+        </div>
+            <script src="./scripts/index.js"></script>
+</body>
+</html>
